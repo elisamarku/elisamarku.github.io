@@ -14,12 +14,18 @@ for (let i =0 ;i < albums.length; i++) {
 
 function getAlbumHTML (album) {
   var div = elemBuilder("div","al");
-  var a = elemBuilder("a","","",album.imgLink);
+  var amod = elemBuilder("div", "amod");
   var img = elemBuilder("img","albumart");
   img.src = album.imgSrc;
-  img.href = album.imgLink;
-  a.append(img);
-  div.append(a);
+  var details = elemBuilder("div", "details");
+  var text = elemBuilder("button","btn btn-link");
+  details.setAttribute("data-toggle","modal");
+  details.setAttribute("data-target", "#detailsModal");
+  text.innerHTML = "view details";
+  details.append(text);
+  amod.append(img);
+  amod.append(details);
+  div.append(amod);
   return div;
 }
 
