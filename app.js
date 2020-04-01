@@ -1,16 +1,26 @@
-let flexy = document.querySelector('#flex-container');
+function elemBuilder(elemTag, elemClass, text = "", href = "") {
+  let elem = document.createElement(elemTag);
+  elem.className = elemClass;
+  if (text !== "") elem.text = text;
+  if (href !== "") elem.href = href;
+  return elem;
+}
 
-for (var i=0; i < mydata.length; i++) {
+for (let i =0 ;i < albums.length; i++) {
+  const album = albums[i];
+  document.getElementById('flexy').append(getAlbumHTML(album));
 
-    let albumCard = document.createElement(div);
-    let a = document.createElement("a"); 
-    a.href = mydata.albums[i].imgLink;
-    let img = document.createElement("img");
-    img.src = mydata.albums[i].imgSrc;
-    img.width = "100%";
-    img.height = "100%";
-    a.appendChild(img);
-    albumCard.appendChild(a);
-    flexy.appendChild(albumCard);
+}
 
-  }
+function getAlbumHTML (album) {
+  var div = elemBuilder("div","al");
+  var a = elemBuilder("a","","",album.imgLink);
+  var img = elemBuilder("img","albumart");
+  img.src = album.imgSrc;
+  img.href = album.imgLink;
+  a.append(img);
+  div.append(a);
+  return div;
+}
+
+
