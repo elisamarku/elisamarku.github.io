@@ -127,6 +127,286 @@ var albums = [
             "artist": "Turnover",
             "year": "2015",
             "genre": "indie rock"
+        },
+        {
+            "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/81qABwLq4zL._SL1500_.jpg",
+            "spotify": "spotify:album:5xFZ4iElFbUFtOGX4lvdTM",
+            "title": "Come Around Sundown",
+            "artist": "Kings of Leon",
+            "year": "2010",
+            "genre": "alternative rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/b/b0/KOLMB.jpg",
+            "spotify": "spotify:album:0cRJKK0y1sfZEqWub4dK9v",
+            "title": "Mechanical Bull",
+            "artist": "Kings of Leon",
+            "year": "2013",
+            "genre": "alternative rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/c/c1/KingsOfLeon-OnlyByTheNightCover.png",
+            "spotify": "spotify:album:5CZR6ljD0x9fTiS4mh9wMp",
+            "title": "Only By The Night",
+            "artist": "Kings of Leon",
+            "year": "2008",
+            "genre": "alternative rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/e/e6/American_football_band_lp_cover.png",
+            "spotify": "spotify:album:3wRBlpk5PRoixwOnLujTal",
+            "title": "American Football",
+            "artist": "American Football",
+            "year": "2011",
+            "genre": "emo"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/The_king_of_limbs.jpg/220px-The_king_of_limbs.jpg",
+            "spotify": "spotify:album:1DBkJIEoeHrTX4WCBQGcCi",
+            "title": "The King Of Limbs",
+            "artist": "Radiohead",
+            "year": "2011",
+            "genre": "alternative rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/d/d6/The_xx_-_Coexist.png",
+            "spotify": "spotify:album:2cRMVS71c49Pf5SnIlJX3U",
+            "title": "Coexist",
+            "artist": "The XX",
+            "year": "2012",
+            "genre": "indie pop"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/e/e8/Ifyouleavedaughter.jpg",
+            "spotify": "spotify:album:6E76aabodIl5DW5BTEZPHG",
+            "title": "If You Leave",
+            "artist": "Daughter",
+            "year": "2013",
+            "genre": "indie folk"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/4/42/What_went_down_cover.jpg",
+            "spotify": "spotify:album:4uIDigk79DeZEYV6Z5Yf4s",
+            "title": "What Went Down",
+            "artist": "Foals",
+            "year": "2015",
+            "genre": "indie rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/8/85/Holy_Fire_Foals.jpg",
+            "spotify": "spotify:album:0PIR7PK8DMB4pgoxq7F9Ad",
+            "title": "Holy Fire",
+            "artist": "Foals",
+            "year": "2013",
+            "genre": "indie rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/0/00/Silentalarmcover.jpg",
+            "spotify": "spotify:album:1VpqO2dBJdAS3YAimXlhEM",
+            "title": "Silent Alarm",
+            "artist": "Bloc Party",
+            "year": "2005",
+            "genre": "indie rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/8/8c/A_Weekend_in_the_City.jpg",
+            "spotify": "spotify:album:5PkAUwhhB5YGgwnvhy4AC7",
+            "title": "A Weekend In The City",
+            "artist": "Bloc Party",
+            "year": "2007",
+            "genre": "indie rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/f/f8/Harmlessness_Cover.jpg",
+            "spotify": "spotify:album:6yJAGomK5rv3uAqJMw5d9n",
+            "title": "Harmlessness",
+            "artist": "The World Is A Beautiful Place And I Am No Longer Afraid To Die",
+            "year": "2015",
+            "genre": "indie rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/2/28/Channel_ORANGE.jpg",
+            "spotify": "spotify:album:623Ef2ZEB3Njklix4PC0Rs",
+            "title": "channel ORANGE",
+            "artist": "Frank Ocean",
+            "year": "2012",
+            "genre": "alternative R&B"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/a/a0/Blonde_-_Frank_Ocean.jpeg",
+            "spotify": "spotify:album:3mH6qwIy9crq0I9YQbOuDf",
+            "title": "Blonde",
+            "artist": "Frank Ocean",
+            "year": "2016",
+            "genre": "alternative R&B"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/7/7f/Assume_Form.jpg",
+            "spotify": "spotify:album:3VpbXPsAOhcp3duHhkye8g",
+            "title": "Assume Form",
+            "artist": "James Blake",
+            "year": "2019",
+            "genre": "pop"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/8/8a/Lana_Del_Rey_-_Norman_Fucking_Rockwell.png",
+            "spotify": "spotify:album:5XpEKORZ4y6OrCZSKsi46A",
+            "title": "Normal Fucking Rockwell",
+            "artist": "Lana Del Rey",
+            "year": "2019",
+            "genre": "pop"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/2/29/BornToDieAlbumCover.png",
+            "spotify": "spotify:track:1wYDu4f5nfxwCnio99I47J",
+            "title": "Born To Die",
+            "artist": "Lana Del Rey",
+            "year": "2012",
+            "genre": "pop"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/5/57/Trouble_Will_Find_Me.jpg",
+            "spotify": "spotify:album:2JhR4tjuc3MIKa8v2JaKze",
+            "title": "Trouble Will Find Me",
+            "artist": "The National",
+            "year": "2013",
+            "genre": "indie rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/0/08/Highviolet.jpg",
+            "spotify": "spotify:album:36VJqCEgUg3nj0Eyxtc1av",
+            "title": "High Violet",
+            "artist": "The National",
+            "year": "2010",
+            "genre": "indie rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/b/b0/Sleep_Well_Beast.jpg",
+            "spotify": "spotify:album:6zG9PHw8dlMLIyRE9TEGGk",
+            "title": "Sleep Well Beast",
+            "artist": "The National",
+            "year": "2017",
+            "genre": "indie rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/2/2b/TheCureWish.jpg",
+            "spotify": "spotify:album:0aEL0zQ4XLuxQP0j7sLlS1",
+            "title": "Wish",
+            "artist": "The Cure",
+            "year": "1992",
+            "genre": "alternative rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/6/68/The_Cure_-_Bloodflowers.jpg",
+            "spotify": "spotify:album:5HJmojoRWpw0GYiRjdLT6B",
+            "title": "Bloodflowers",
+            "artist": "The Cure",
+            "year": "1992",
+            "genre": "2000"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/8/84/NothingButThievesAlbum.jps.jpg",
+            "spotify": "spotify:album:3q4BkDV5B7sczFcfrIl2a2",
+            "title": "Nothing But Thieves",
+            "artist": "Nothing But Thieves",
+            "year": "2015",
+            "genre": "2015"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/0/03/The_1975_%28album%29_by_The_1975.png",
+            "spotify": "spotify:album:6Z1zv6Hw9bdvSoxI5uYk2h",
+            "title": "The 1975",
+            "artist": "The 1975",
+            "year": "2013",
+            "genre": "synthpop"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/2/29/Angus_%26_Julia_Stone_-_Down_the_Way_-_Album_cover.jpg",
+            "spotify": "spotify:album:5W1E1tqlKUl7p6KuyCAhji",
+            "title": "Down The Way",
+            "artist": "Angus & Julia Stone",
+            "year": "2010",
+            "genre": "folk"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/2/28/Paramore_-_Riot%21.png",
+            "spotify": "spotify:album:3UoOO8m0oxxvUHXUKf3qcZ",
+            "title": "Riot",
+            "artist": "Paramore",
+            "year": "2007",
+            "genre": "pop punk"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/7/7d/Brand_New_Eyes_cover.jpg",
+            "spotify": "spotify:album:3CaQTJU2Cpx7GXTgenmb2r",
+            "title": "Brand New Eyes",
+            "artist": "Paramore",
+            "year": "2009",
+            "genre": "pop punk"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/4/4c/Halsey_-_Badlands.png",
+            "spotify": "spotify:album:5OZJflQcQCdZLQjtUudCin",
+            "title": "BADLANDS",
+            "artist": "Halsey",
+            "year": "2015",
+            "genre": "dark pop"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/3/38/Troye_Sivan_-_Blue_Neighbourhood.png",
+            "spotify": "spotify:album:2mRBvhDWqm8Fj2U0F6mMY4",
+            "title": "Blue Neighbourhood",
+            "artist": "Troye Sivan",
+            "year": "2015",
+            "genre": "indie pop"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg",
+            "spotify": "spotify:album:2UJcKiJxNryhL050F5Z1Fk",
+            "title": "Nevermind",
+            "artist": "Nirvana",
+            "year": "1991",
+            "genre": "grunge"
+        },
+        {
+            "imgSrc": "https://images.genius.com/15ed4279858b450ad41fe7fbd1722c08.700x700x1.jpg",
+            "spotify": "spotify:album:2yAyZp16EbanQ9pBwQs70x",
+            "title": "A Different Age",
+            "artist": "Current Joys",
+            "year": "2018",
+            "genre": ""
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/a/ab/Where_Polly_People_Go_to_Read_Gus_Dapperton.jpg",
+            "spotify": "spotify:album:4qSYIc2q02zeCN2fB2hBBR",
+            "title": "Where Polly People Go To Read",
+            "artist": "Gus Dapperton",
+            "year": "2019",
+            "genre": "indie pop"
+        },
+        {
+            "imgSrc": "https://images.genius.com/46dc54b6fe012dc034bbbd430090e3e4.1000x1000x1.jpg",
+            "spotify": "spotify:album:4yEyNFafoAX2uKKs4WOmNo",
+            "title": "You Think You're A Comic!",
+            "artist": "Gus Dapperton",
+            "year": "2018",
+            "genre": "indie pop"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/f/f3/Mumfordsonssighnomore.jpg",
+            "spotify": "spotify:album:3znLFUETgB3dVfFdBwKHqh",
+            "title": "Sigh No More",
+            "artist": "Mumford & Sons",
+            "year": "2010",
+            "genre": "indie folk"
+        },
+        {
+            "imgSrc": "https://m.media-amazon.com/images/I/91Ux0EO2iRL._SS500_.jpg",
+            "spotify": "spotify:album:0jcOOqw8oVjs2ngnrndbsO",
+            "title": "Babel",
+            "artist": "Mumford & Sons",
+            "year": "2012",
+            "genre": "indie folk"
         }
     ]
 
