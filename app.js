@@ -8,7 +8,7 @@ function elemBuilder(elemTag, elemClass, text = "", href = "") {
 }
 
 function removeSpace (string){
-  return string.replace(/\s+/g, '').replace("'", "").replace("&","");
+  return string.replace(/\s+/g, '').replace(/\'+/g, "").replace(/\&+/g,"").replace(/\,+/g,"");
 }
 
 // production
