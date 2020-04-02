@@ -46,6 +46,87 @@ var albums = [
             "artist": "Coldplay",
             "year": "2000",
             "genre": "alternative rock"
+        },
+        {
+            "imgSrc": "https://media1.jpc.de/image/w600/front/0/0889854624217.jpg",
+            "spotify": "spotify:album:6ZB8qaR9JNuS0Q0bG1nbcH",
+            "title": "Funeral",
+            "artist": "Arcade Fire",
+            "year": "2000",
+            "genre": "indie rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/b/b4/Ben_Howard_%E2%80%93_I_Forget_Where_We_Were.jpg",
+            "spotify": "spotify:album:4WI3oFEsDiHU3I5xHz88sF",
+            "title": "I Forget Where We Were",
+            "artist": "Ben Howard",
+            "year": "2014",
+            "genre": "indie folk"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/4/4b/AngusAndJuliaStone2014Album.jpg",
+            "spotify": "spotify:album:2nYlRh1kWV2oAmjwgk9Il2",
+            "title": "Angus & Julia Stone",
+            "artist": "Angus & Julia Stone",
+            "year": "2014",
+            "genre": "indie folk"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/6/6f/SnowAngusAndJuliaStone.png",
+            "spotify": "spotify:album:3k3EvBHWTu3VkyAh5Pevv9",
+            "title": "SNOW",
+            "artist": "Angus & Julia Stone",
+            "year": "2017",
+            "genre": "indie folk"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/2/20/Arcticmonkeys-humbug.jpg",
+            "spotify": "spotify:album:5IEoiwkThhRmSMBANhpxl2",
+            "title": "Humbug",
+            "artist": "Arctic Monkeys",
+            "year": "2009",
+            "genre": "alternative rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/0/04/Arctic_Monkeys_-_AM.png",
+            "spotify": "spotify:album:78bpIziExqiI9qztvNFlQu",
+            "title": "AM",
+            "artist": "Arctic Monkeys",
+            "year": "2013",
+            "genre": "indie rock"
+        }
+        ,
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/5/5f/Whatever_People_Say_I_Am%2C_That%27s_What_I%27m_Not.jpg",
+            "spotify": "spotify:album:50Zz8CkIhATKUlQMbHO3k1",
+            "title": "Whatever People Say I Am, That's What I'm Not",
+            "artist": "Arctic Monkeys",
+            "year": "2006",
+            "genre": "alternative rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/d/d3/The_Balcony_Catfish_and_the_Bottlemen.jpg",
+            "spotify": "spotify:album:0C0OFASoQC57yC12vQhCwN",
+            "title": "The Balcony",
+            "artist": "Catfish & The Bottlemen",
+            "year": "2014",
+            "genre": "alternative rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/a/a7/Youth_Is_Only_Ever_Fun_in_Retrospect.jpg",
+            "spotify": "spotify:album:3Hua29YXoJu25qVEhmssFb",
+            "title": "Youth Is Only Ever Fun In Retrospect",
+            "artist": "Sundara Karma",
+            "year": "2017",
+            "genre": "indie rock"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/2/25/Turnover_-_Peripheral_Vision.jpg",
+            "spotify": "spotify:album:0KruT6dkmYULduBmT23Svn",
+            "title": "Peripheral Vision",
+            "artist": "Turnover",
+            "year": "2015",
+            "genre": "indie rock"
         }
     ]
 
