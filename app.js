@@ -1,3 +1,4 @@
+main();
 //toolbox 
 function elemBuilder(elemTag, elemClass, text = "", href = "") {
   let elem = document.createElement(elemTag);
@@ -12,13 +13,22 @@ function removeSpace (string){
 }
 
 // production
-
-for (let i =0 ;i < albums.length; i++) {
-  const album = albums[i];
-  document.getElementById('flexy').append(getAlbumHTML(album));
-  document.getElementById('mod').appendChild(getModalStructure(album));
+function main (){
+  console.log("calling main");
+    for (let i =0 ;i < albums.length; i++) {
+      const album = albums[i];
+      document.getElementById('flexy').append(getAlbumHTML(album));
+      document.getElementById('mod').appendChild(getModalStructure(album));
+  }
 }
-
+function refresh (){
+  console.log("calling refresh");
+  document.getElementById('flexy').innerHTML ="";
+    for (let i =0 ;i < albums.length; i++) {
+      const album = albums[i];
+      document.getElementById('flexy').append(getAlbumHTML(album));
+  }
+}
 function getAlbumHTML (album) {
   var div = elemBuilder("div","al");
   var amod = elemBuilder("div", "amod");
@@ -102,7 +112,7 @@ function getModalBody (album) {
 
   //append all
   div1.append(img);
-  div1.append(iframe);
+  //div1.append(iframe);
   div2.append(title);
   div2.append(artist)
   div2.append(table);
@@ -135,3 +145,46 @@ function tableMaker(album) {
   table.append(tbody);
   return table;
 }
+
+// actions
+
+function orderBy (string) {
+  console.log("i am here");
+  switch (string) {
+    case "title": 
+      albums.sort((a, b) => {
+      var nameA = a.title.charAt(1); // ignore upper and lowercase
+      var nameB = b.title.charAt(1); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+  } )
+    break;
+    case "artist":
+    albums.sort((c, d) => {
+      var nameC = c.artist.charAt(1); // ignore upper and lowercase
+      var nameD = d.artist.charAt(1); // ignore upper and lowercase
+      if (nameC < nameD) {
+        return -1;
+      }
+      if (nameC > nameD) {
+        return 1;
+      }
+  })
+  break;
+  }
+  refresh();
+  console.log(albums);
+}
+
+$(document).ready(function() {
+  $("#orderbytitle").click(function () {
+    orderBy("title");
+  });
+  $("#orderbyartist").click(function () {
+    orderBy("artist");
+  });
+});

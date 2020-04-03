@@ -120,6 +120,9 @@
     color: gray;
   }
 }
+.dropdown-menu {
+  display:none;
+}
 .dropdown-menu > a {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -129,6 +132,9 @@
 }
 
 </style>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+crossorigin="anonymous"></script>
 </head>
 <body>
 <div class ="header">
@@ -148,8 +154,8 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">order</a>
           <div class="dropdown-menu dropdown-menu-primary dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">by artist</a>
-            <a class="dropdown-item" href="#">by title</a>
+            <a class="dropdown-item" id="orderbyartist" href="#">by artist</a>
+            <a class="dropdown-item" id="orderbytitle" href="#orderbytitle">by title</a>
           </div>
         </li>
       </ul>
@@ -176,9 +182,6 @@
 </div>
 -->
 <link rel="stylesheet" type="text/css" href="/fonts/myfonts.css" />
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
