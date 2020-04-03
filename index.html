@@ -148,13 +148,16 @@ crossorigin="anonymous"></script>
         <li class="nav-item">
           <a class="nav-link" href="#">about <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">creator</a>
-        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">filter</a>
+          <div class="dropdown-menu dropdown-menu-primary dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" id="filterbygenre" href="#">by genre</a>
+            <a class="dropdown-item" id="filterbyyear" href="#">by year</a>
+          </div>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">order</a>
           <div class="dropdown-menu dropdown-menu-primary dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" id="orderbyartist" href="#">by artist</a>
+            <a class="dropdown-item" id="orderbyartist" href="#orderbyartist">by artist</a>
             <a class="dropdown-item" id="orderbytitle" href="#orderbytitle">by title</a>
           </div>
         </li>
