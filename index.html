@@ -13,7 +13,7 @@
 }
 
 .flex-container > div {
-  background-color: #f1f1f1;
+  background-color:white;
   width: 200px;
   height: 200px;
   text-align: center;
@@ -23,8 +23,7 @@
 .header {
     background-color: white;
 }
-.scrollbar
-{
+.scrollbar{
 	margin-left: 30px;
 	float: left;
 	height: 300px;
@@ -36,6 +35,19 @@
 .albumart {
   width:100%;
 }
+.amod {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.amod:hover .albumart { 
+  transform: scale(1.05);
+  -webkit-filter: grayscale(1);
+  transition: 0.7s;
+  opacity: 0.4;
+  cursor: pointer;
+}
 .header {
   font-family: 'Space Mono', monospace;
 }
@@ -44,37 +56,6 @@
 }
 .nav-link:hover {
   transition: 0.6s;
-}
-.details {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-.btn.btn-link, .btn.btn-link:hover, .btn.btn-link:visited, .btn.btn-link:focus  {
-  color: white;
-  font-size: 15px;
-  padding: 16px 32px;
-  display:inline-block;
-  white-space: nowrap;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 200;
-  text-decoration: none;
-}
-
-.al:hover .albumart {
-  opacity: 0.4;
-  transition: 0.7s;
-}
-.al:hover .details {
-  opacity: 1;
-}
-.amod {
-  position:relative;
 }
 .close {
   padding: 10px;
@@ -168,22 +149,6 @@ crossorigin="anonymous"></script>
 <div class="flex-container" id="flexy">
 </div>
 <div id="mod"></div>
-<!-- Modal 
-<div class="modal fade" id="detailsModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div class="close">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-    </div>
-  </div>
-</div>
--->
 <link rel="stylesheet" type="text/css" href="/fonts/myfonts.css" />
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"

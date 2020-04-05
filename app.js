@@ -12,6 +12,13 @@ function removeSpace (string){
   return string.replace(/\s+/g, '').replace(/\'+/g, "").replace(/\&+/g,"").replace(/\,+/g,"");
 }
 
+function getAlbumById (id){
+  for (let i =0 ;i < albums.length; i++) {
+    const album = albums[i];
+    if (removeSpace(album.title) == id) return album;
+  }
+}
+
 // production
 function main (){
   console.log("calling main");
@@ -19,6 +26,12 @@ function main (){
       const album = albums[i];
       document.getElementById('flexy').append(getAlbumHTML(album));
       document.getElementById('mod').appendChild(getModalStructure(album));
+      
+      $(document).ready(function() {
+        $(".amod").click(function () { 
+          iframeBuilder(removeSpace(album.title));
+        });
+      });
   }
 }
 function refresh (){
@@ -27,6 +40,12 @@ function refresh (){
     for (let i =0 ;i < albums.length; i++) {
       const album = albums[i];
       document.getElementById('flexy').append(getAlbumHTML(album));
+
+      $(document).ready(function() {
+        $(".amod").click(function () { 
+          iframeBuilder(removeSpace(album.title));
+        });
+      });
   }
 }
 function getAlbumHTML (album) {
@@ -34,14 +53,9 @@ function getAlbumHTML (album) {
   var amod = elemBuilder("div", "amod");
   var img = elemBuilder("img","albumart");
   img.src = album.imgSrc;
-  var details = elemBuilder("div", "details");
-  var text = elemBuilder("button","btn btn-link");
-  details.setAttribute("data-toggle","modal");
-  details.setAttribute("data-target", "#" + removeSpace(album.title));
-  text.innerHTML = "view details";
-  details.append(text);
+  img.setAttribute("data-toggle","modal");
+  img.setAttribute("data-target", "#" + removeSpace(album.title));
   amod.append(img);
-  amod.append(details);
   div.append(amod);
   return div;
 }
@@ -82,21 +96,21 @@ function getModalStructure (album){
 }
 
 function getModalBody (album) {
-  //iframe
-  var spotifyID = album.spotify.slice(14);
+  //iframe prep
   var iframe = document.createElement("iframe");
-  iframe.setAttribute("src","https://open.spotify.com/embed/album/" + spotifyID);
   iframe.setAttribute("frameborder","0");
   iframe.setAttribute("allowtransparency", "true");
   iframe.setAttribute("allow","encrypted-media");
+  var iframeId = removeSpace(album.title).slice(3); 
+  iframe.setAttribute("id", iframeId);
   iframe.width = "70%";
   iframe.height = "80";
 
   //flex container
   var container = elemBuilder("div", "container-fluid");
   var row = elemBuilder("div","row");
-  var div1 = elemBuilder("div", "col");
-  var div2 = elemBuilder("div" , "col");
+  var col1 = elemBuilder("div", "col");
+  var col2 = elemBuilder("div" , "col");
 
   //image
   var img = elemBuilder("img","modalimg");
@@ -111,17 +125,22 @@ function getModalBody (album) {
   table = tableMaker(album);
 
   //append all
-  div1.append(img);
-  //div1.append(iframe);
-  div2.append(title);
-  div2.append(artist)
-  div2.append(table);
-  row.append(div1);
-  row.append(div2);
+  col1.append(img);
+  col1.append(iframe);
+  col2.append(title);
+  col2.append(artist)
+  col2.append(table);
+  row.append(col1);
+  row.append(col2);
   container.append(row);
-
   
   return container;
+}
+function iframeBuilder (albumId) {
+  var album = getAlbumById(albumId);
+  var spotifyID = album.spotify.slice(14);
+  //add
+  document.getElementById(albumId.slice(3)).setAttribute("src","https://open.spotify.com/embed/album/" + spotifyID);
 }
 
 function tableMaker(album) {
