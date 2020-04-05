@@ -168,7 +168,7 @@ function tableMaker(album) {
 // actions
 
 function orderBy (string) {
-  console.log("i am here");
+
   switch (string) {
     case "title": 
       albums.sort((a, b) => {
@@ -186,8 +186,51 @@ function orderBy (string) {
   break;
   }
   refresh();
-  //console.log(albums);
 }
+
+var clone = [...albums];
+function filterBy (string, argument) {
+  console.log("filering" + string);
+  albums = clone;
+  switch (argument) {
+    case "genre": 
+    albums = albums.filter(a => a.genre==string );
+    break;
+    case "year":
+    albums = albums.filter(a => a.year==string );
+    break;
+  }
+  console.log(albums);
+  refresh();
+}
+
+function genreList () {
+  console.log("i am here");
+  var genrelist = [];
+   for (let b=0; b < albums.length; b++) {
+     const album = albums[b];
+     if (!genrelist.includes(album.genre)) {
+       genrelist.push(album.genre);
+   }
+  }
+   console.log(genrelist);
+   for (let genre=0; genre < genrelist.length; genre++){
+    var a = document.createElement("div");
+    var b = document.createElement("a");
+    b.id=removeSpace(genrelist[genre]);
+    b.setAttribute("href", "#");
+    b.innerHTML=genrelist[genre];
+    a.append(b);
+    document.getElementById("collapseGenre").append(a);
+
+    var fullid = "#" + removeSpace(genrelist[genre]);
+    console.log(fullid);
+    $(fullid).click(function () {
+      filterBy(genrelist[genre], "genre");
+    });
+   }
+}
+
 
 $(document).ready(function() {
   $("#orderbytitle").click(function () {
@@ -195,5 +238,12 @@ $(document).ready(function() {
   });
   $("#orderbyartist").click(function () {
     orderBy("artist");
+  });
+  $("#filterbyyear").click(function () {
+    filterBy("year");
+  });
+  $("#filterbygenre").click(function () {
+    document.getElementById("collapseGenre").innerHTML = "";
+    genreList();
   });
 });

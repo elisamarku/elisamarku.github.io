@@ -302,7 +302,7 @@ var albums = [
             "title": "Bloodflowers",
             "artist": "The Cure",
             "year": "1992",
-            "genre": "2000"
+            "genre": "alternative rock"
         },
         {
             "imgSrc": "https://upload.wikimedia.org/wikipedia/en/8/84/NothingButThievesAlbum.jps.jpg",
@@ -310,7 +310,7 @@ var albums = [
             "title": "Nothing But Thieves",
             "artist": "Nothing But Thieves",
             "year": "2015",
-            "genre": "2015"
+            "genre": "alternative rock"
         },
         {
             "imgSrc": "https://upload.wikimedia.org/wikipedia/en/0/03/The_1975_%28album%29_by_The_1975.png",
@@ -374,7 +374,7 @@ var albums = [
             "title": "A Different Age",
             "artist": "Current Joys",
             "year": "2018",
-            "genre": ""
+            "genre": "emo"
         },
         {
             "imgSrc": "https://upload.wikimedia.org/wikipedia/en/a/ab/Where_Polly_People_Go_to_Read_Gus_Dapperton.jpg",
