@@ -34,6 +34,7 @@ function main (){
       });
   }
 }
+
 function refresh (){
   console.log("calling refresh");
   document.getElementById('flexy').innerHTML ="";
@@ -139,7 +140,6 @@ function getModalBody (album) {
 function iframeBuilder (albumId) {
   var album = getAlbumById(albumId);
   var spotifyID = album.spotify.slice(14);
-  //add
   document.getElementById(albumId.slice(3)).setAttribute("src","https://open.spotify.com/embed/album/" + spotifyID);
 }
 
@@ -172,31 +172,21 @@ function orderBy (string) {
   switch (string) {
     case "title": 
       albums.sort((a, b) => {
-      var nameA = a.title.charAt(1); // ignore upper and lowercase
-      var nameB = b.title.charAt(1); // ignore upper and lowercase
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
+      var one = a.title;
+      var two = b.title; 
+      return one.localeCompare(two, 'en');
   } )
     break;
     case "artist":
     albums.sort((c, d) => {
-      var nameC = c.artist.charAt(1); // ignore upper and lowercase
-      var nameD = d.artist.charAt(1); // ignore upper and lowercase
-      if (nameC < nameD) {
-        return -1;
-      }
-      if (nameC > nameD) {
-        return 1;
-      }
+      var one = c.artist;
+      var two = d.artist; 
+      return one.localeCompare(two, 'en');
   })
   break;
   }
   refresh();
-  console.log(albums);
+  //console.log(albums);
 }
 
 $(document).ready(function() {
