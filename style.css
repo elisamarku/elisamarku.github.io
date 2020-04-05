@@ -88,10 +88,18 @@
   animation: color-shift 1.5s normal forwards;
   
 }
-.collapse {
+#accordion a {
   font-family: Arial, Helvetica, sans-serif;
-  color: black !important;
+  color: black;
   text-decoration: none;
+}
+#collapseGenre #collapseYear {
+  background-color: #f0f0f0;
+}
+#collapseGenre a:hover {
+color: white;
+background-color:black; 
+transition: 0.3s ease-in-out;
 }
 
 @keyframes color-shift {
@@ -110,6 +118,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .dropdown-menu > a:hover {
+  color: black;
+  text-decoration: none;
   background-color: #fada5e; 
   transition: 0.3s ease-in-out;
 }

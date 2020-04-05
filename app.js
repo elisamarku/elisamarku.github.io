@@ -188,7 +188,7 @@ function orderBy (string) {
   refresh();
 }
 
-var clone = [...albums];
+var clone = [...albums]; // to refresh the array before filtering again
 function filterBy (string, argument) {
   console.log("filering" + string);
   albums = clone;
@@ -205,7 +205,7 @@ function filterBy (string, argument) {
 }
 
 function genreList () {
-  console.log("i am here");
+
   var genrelist = [];
    for (let b=0; b < albums.length; b++) {
      const album = albums[b];
@@ -213,7 +213,6 @@ function genreList () {
        genrelist.push(album.genre);
    }
   }
-   console.log(genrelist);
    for (let genre=0; genre < genrelist.length; genre++){
     var a = document.createElement("div");
     var b = document.createElement("a");
@@ -224,7 +223,6 @@ function genreList () {
     document.getElementById("collapseGenre").append(a);
 
     var fullid = "#" + removeSpace(genrelist[genre]);
-    console.log(fullid);
     $(fullid).click(function () {
       filterBy(genrelist[genre], "genre");
     });
