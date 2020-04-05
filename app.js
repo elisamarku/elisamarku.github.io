@@ -190,17 +190,31 @@ function orderBy (string) {
 
 var clone = [...albums]; // to refresh the array before filtering again
 function filterBy (string, argument) {
-  console.log("filering" + string);
-  albums = clone;
+  albums = [...clone];
   switch (argument) {
     case "genre": 
     albums = albums.filter(a => a.genre==string );
     break;
+
     case "year":
-    albums = albums.filter(a => a.year==string );
+    //get year range
+    var start = parseInt(string.slice(0,4));
+    var end = parseInt(string.slice(5,9));
+    let list = [];
+    if (string.length < 9 && string.length != 4) {
+      alert("Please insert a valid year or year range.");
+      break;
+    }
+    list.push(start);
+    for (let s = start; s< end; s++) {
+      list.push(s);
+    }
+    console.log(list);
+    //filter 
+    albums = albums.filter(a => list.includes(parseInt(a.year)));
     break;
   }
-  console.log(albums);
+  //console.log(albums);
   refresh();
 }
 
@@ -227,6 +241,7 @@ function genreList () {
       filterBy(genrelist[genre], "genre");
     });
    }
+   document.getElementById("filterbygenre").setAttribute("id","filterbygenrevisited"); //to keep the color
 }
 
 
@@ -237,11 +252,15 @@ $(document).ready(function() {
   $("#orderbyartist").click(function () {
     orderBy("artist");
   });
-  $("#filterbyyear").click(function () {
-    filterBy("year");
-  });
   $("#filterbygenre").click(function () {
     document.getElementById("collapseGenre").innerHTML = "";
     genreList();
+  });
+  $("#yearRange").keypress(function(event) {
+      if (event.which == 13) {
+        event.preventDefault();
+          var value = document.getElementById("yearRange").value;
+          filterBy(value, "year");
+       }
   });
 });
