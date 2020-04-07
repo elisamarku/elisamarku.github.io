@@ -20,7 +20,7 @@ am4core.ready(function() {
        if (!genrelist.includes(album.genre)) {
          genrelist.push(album.genre);
      }
-     genrelist = genrelist.sort((a,b) => findAmount(b) - findAmount(a));
+     genrelist = genrelist.sort((a,b) => findAmount(a) - findAmount(b));
   }
   //get genres
   var yearlist = [];
@@ -66,7 +66,6 @@ categoryAxis.renderer.minGridDistance = 40;
 
 
 var  valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-
 
     for (a in genrelist) {
         var series = chart.series.push(new am4charts.ColumnSeries());
