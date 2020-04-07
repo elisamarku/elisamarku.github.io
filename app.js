@@ -19,8 +19,27 @@ function getAlbumById (id){
   }
 }
 
+function shuffle(albums) {
+  var currentIndex = albums.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = albums[currentIndex];
+    albums[currentIndex] = albums[randomIndex];
+    albums[randomIndex] = temporaryValue;
+  }
+  return albums;
+}
+
 // production
 function main (){
+  //shuffle(albums);
   console.log("calling main");
     for (let i =0 ;i < albums.length; i++) {
       const album = albums[i];
@@ -82,7 +101,6 @@ function getModalStructure (album){
   span.setAttribute("aria-hidden","true");
   span.innerHTML = "&times;";
 
-  var modalheader = elemBuilder("div","modal-header");
   var modalbody = elemBuilder("div","modal-body");
   modalbody.append(getModalBody(album));
   //appending
@@ -168,6 +186,7 @@ function tableMaker(album) {
 // actions
 
 function orderBy (string) {
+albums = [...clone];
 
   switch (string) {
     case "title": 
@@ -193,6 +212,9 @@ function filterBy (string, argument) {
   albums = [...clone];
   switch (argument) {
     case "genre": 
+    if (string == "all") {
+      break;
+    }
     albums = albums.filter(a => a.genre==string );
     break;
 
@@ -221,6 +243,7 @@ function filterBy (string, argument) {
 function genreList () {
 
   var genrelist = [];
+  genrelist.push("all");
    for (let b=0; b < albums.length; b++) {
      const album = albums[b];
      if (!genrelist.includes(album.genre)) {
@@ -243,7 +266,6 @@ function genreList () {
    }
    document.getElementById("filterbygenre").setAttribute("id","filterbygenrevisited"); //to keep the color
 }
-
 
 $(document).ready(function() {
   $("#orderbytitle").click(function () {

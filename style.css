@@ -115,6 +115,14 @@ transition: 0.3s ease-in-out;
     color: gray;
   }
 }
+@keyframes opacityplay {
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .dropdown-menu {
     display:none;
 }
@@ -129,3 +137,12 @@ transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
+#chartdiv, #yearchartdiv {
+    width: 100%;
+    height: 500px;
+  }
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: black !important;
+    background-color: #F0F0F0 !important;
+}
