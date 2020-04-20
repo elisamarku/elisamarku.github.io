@@ -49,7 +49,7 @@ for (y in yearlist) {
     for (g in genrelist) {   
          var genre = genrelist[g];
          if (searchArray(yearlist[y],genre) != 0){
-         obj[genre] = searchArray(yearlist[y],genre);
+           obj[genre] = searchArray(yearlist[y],genre);
         }
     }
  chart.data.push(obj);
@@ -86,7 +86,6 @@ function redraw() {
       series.appear();
     });
   }
-  $("#two").click(function () {
-    redraw(); 
 });
-});
+
+document.getElementById('two').addEventListener('click', redraw);

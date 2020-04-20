@@ -42,10 +42,15 @@ body::-webkit-scrollbar-thumb {
 .amod:hover .albumart { 
   transform: scale(1.05);
   -webkit-filter: grayscale(1);
-  transition: 0.7s ease-in-out;
+  transition: 0.6s ease-out;
   opacity: 0.4;
   cursor: pointer;
 }
+.amod .albumart { 
+  transition: 0.5s ease-in;
+  cursor: pointer;
+}
+
 .header {
   font-family: 'Space Mono', monospace;
 }

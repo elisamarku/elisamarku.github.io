@@ -12,6 +12,7 @@ function removeSpace (string){
   return string.replace(/\s+/g, '').replace(/\'+/g, "").replace(/\&+/g,"").replace(/\,+/g,"");
 }
 
+// TODO: refactor to filter function in albums array
 function getAlbumById (id){
   for (let i =0 ;i < albums.length; i++) {
     const album = albums[i];
@@ -37,37 +38,32 @@ function shuffle(albums) {
   return albums;
 }
 
+function fillContainer(album) {
+  document.getElementById('flexy').append(getAlbumHTML(album));
+
+  $(".amod").click(function () { 
+    iframeBuilder(removeSpace(album.title));
+  });
+}
+ 
 // production
 function main (){
   //shuffle(albums);
   console.log("calling main");
-    for (let i =0 ;i < albums.length; i++) {
-      const album = albums[i];
-      document.getElementById('flexy').append(getAlbumHTML(album));
-      document.getElementById('mod').appendChild(getModalStructure(album));
-      
-      $(document).ready(function() {
-        $(".amod").click(function () { 
-          iframeBuilder(removeSpace(album.title));
-        });
-      });
-  }
+
+  albums.forEach(function (album) {
+    fillContainer(album);
+    document.getElementById('mod').appendChild(getModalStructure(album));
+  })
+
 }
 
 function refresh (){
   console.log("calling refresh");
   document.getElementById('flexy').innerHTML ="";
-    for (let i =0 ;i < albums.length; i++) {
-      const album = albums[i];
-      document.getElementById('flexy').append(getAlbumHTML(album));
-
-      $(document).ready(function() {
-        $(".amod").click(function () { 
-          iframeBuilder(removeSpace(album.title));
-        });
-      });
-  }
+  albums.forEach(fillContainer);
 }
+
 function getAlbumHTML (album) {
   var div = elemBuilder("div","al");
   var amod = elemBuilder("div", "amod");
