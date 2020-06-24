@@ -407,6 +407,22 @@ var albums = [
             "artist": "Mumford & Sons",
             "year": "2012",
             "genre": "indie folk"
+        },
+        {
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/en/6/6d/Slowdive_Album_2017.jpg",
+            "spotify": "spotify:album:4nSWX5A4xVomzrOEGDKLQ6",
+            "title": "Slowdive",
+            "artist": "Slowdive",
+            "year": "2017",
+            "genre": "shoegaze"
+        },
+        {
+            "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/41H2NJQiM7L._SX355_.jpg",
+            "spotify": "spotify:album:4i21O3uVh5palcfFhCjlT7",
+            "title": "Souvlaki",
+            "artist": "Slowdive",
+            "year": "1993",
+            "genre": "shoegaze"
         }
     ]
 
